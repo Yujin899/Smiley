@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
+@import "tailwindcss";
+
+body {
+  font-family: "Jost", sans-serif;
+  @apply bg-slate-950 text-slate-50 tracking-wider;
+}
+
+.nav-link {
+  @apply text-slate-50 hover:text-slate-300 transition-colors duration-200;
+}
+#hero {
+  height: calc(100vh - 84px);
+}
+
+.showMenu {
+  opacity: 1 !important;
+  transform: scale(1) !important;
+  pointer-events: auto !important;
+}
+
+.card:hover .spotlight {
+  opacity: 1;
+  transform: scale(1.2);
+}

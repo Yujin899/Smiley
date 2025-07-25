@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smiley Dental Clinic</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.0.0/remixicon.css"
+    />
+    <link href="./output.css" rel="stylesheet" />
+  </head>
+  <style>
+
+  </style>
+  <body class="bg-slate-950 text-white font-sans"> 
+
+  
+
+    
+    <!-- Header -->
+    <header class="border-b border-slate-700">
+      <nav class="container max-w-6xl mx-auto p-6 flex justify-between items-center">
+  <h1 class="text-3xl font-bold tracking-wider">Smiley</h1>
+
+  <!-- Desktop Menu -->
+  <ul class="hidden md:flex items-center gap-6">
+    <li><a href="#" class="hover:text-blue-400">Home</a></li>
+    <li><a href="#about" class="hover:text-blue-400">About</a></li>
+    <li><a href="#services" class="hover:text-blue-400">Services</a></li>
+    <li><a href="#contact" class="hover:text-blue-400">Contact</a></li>
+  </ul>
+
+  <!-- Mobile Menu Button -->
+  <button id="menu-btn" class="md:hidden text-3xl text-white focus:outline-none cursor-pointer">
+    <i class="ri-menu-4-line text-white"></i>
+  </button>
+</nav>
+
+    </header>
+
+    <!-- Mobile Nav Overlay -->
+<div
+  id="mobile-menu"
+  class="fixed inset-0 z-50 bg-slate-900/80 backdrop-blur-md hidden flex flex-col items-center justify-center px-6"
+>
+  <!-- Close Button -->
+  <button id="close-btn" class="absolute top-6 right-6 text-white text-4xl hover:text-blue-400 transition cursor-pointer">
+    <i class="ri-close-line"></i>
+  </button>
+
+  <!-- Nav Links -->
+  <nav class="flex flex-col items-center gap-6 text-2xl font-semibold text-white animate-fade-in-up">
+    <a href="#" class="hover:text-blue-400 transition" onclick="closeMenu()">Home</a>
+    <a href="#about" class="hover:text-blue-400 transition" onclick="closeMenu()">About</a>
+    <a href="#services" class="hover:text-blue-400 transition" onclick="closeMenu()">Services</a>
+    <a href="#contact" class="hover:text-blue-400 transition" onclick="closeMenu()">Contact</a>
+  </nav>
+</div>
+
+
+    <!-- Hero -->
+    <section
+      class="relative min-h-[90vh] flex items-center justify-center text-center"
+    >
+      <!-- Spotlight Background -->
+      <div
+        class="absolute inset-0 z-0 flex justify-center items-center pointer-events-none"
+      >
+        <div
+          class="w-[600px] h-[400px] bg-slate-900 rounded-full blur-3xl"
+        ></div>
+      </div>
+      <div class="relative z-10 max-w-3xl p-6 space-y-6">
+        <p class="text-blue-300 text-xl">Smiley Dental Clinic</p>
+        <h1 class="text-5xl md:text-7xl font-bold leading-tight">
+          Your Smile is Our Priority
+        </h1>
+        <p class="text-slate-300 text-lg">
+          We specialize in cosmetic and therapeutic dentistry to give you a
+          healthy and confident smile.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center gap-4 justify-center">
+  <div class="flex items-center bg-slate-800 px-3 py-2 rounded-md shadow-sm w-full sm:w-auto">
+    <i class="ri-mail-line text-slate-400 mr-2 text-base"></i>
+    <input
+      type="email"
+      placeholder="Enter your email"
+      class="bg-transparent focus:outline-none text-white placeholder-slate-400 text-sm w-full sm:w-64"
+    />
+  </div>
+  <button
+    class="bg-blue-500 hover:bg-blue-400 text-white px-5 py-2 rounded-md text-sm font-medium shadow-sm transition"
+  >
+    Book a Free Consultation
+  </button>
+</div>
+
+
+      </div>
+    </section>
+
+    <section id="about" class="py-24 px-6 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+    
+    <!-- Text Content -->
+    <div class="space-y-10">
+      <h2 class="text-4xl sm:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+        Who We Are
+      </h2>
+
+      <p class="text-slate-300 text-lg leading-relaxed">
+        At <span class="text-white font-semibold">Smiley Dental Clinic</span>, we believe in transforming lives one smile at a time.
+        With state-of-the-art equipment and a passion for patient care, our team provides top-notch dental services in a welcoming, modern environment.
+      </p>
+
+      <div class="grid sm:grid-cols-2 gap-10">
+        <div class="space-y-3">
+          <h3 class="text-xl font-bold text-white">Our Mission</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Deliver outstanding dental care with empathy and expertise, making confident smiles accessible to everyone.
+          </p>
+        </div>
+        <div class="space-y-3">
+          <h3 class="text-xl font-bold text-white">Our Vision</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            To be the most trusted name in modern dentistry across our community and beyond.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional Image Placeholder -->
+    <div class="flex justify-center">
+      <div class="rounded-2xl overflow-hidden shadow-2xl w-full max-w-md">
+        <img 
+          src="../assets/images/team.jpg" 
+          alt="Smiley Clinic" 
+          class="w-full h-auto object-cover transition-transform duration-500 hover:scale-105" 
+          loading="lazy"
+        >
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+    <!-- Existing Services Section -->
+    <section class="py-20 px-6 max-w-6xl mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-12">Our Services</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div
+          class="card relative group bg-slate-900/50 backdrop-blur-sm rounded-xl p-6 overflow-hidden transition-all"
+        >
+          <div
+            class="spotlight absolute inset-0 bg-blue-500/10 blur-2xl opacity-0 transition-transform duration-500 pointer-events-none"
+          ></div>
+          <div
+            class="relative z-10 flex flex-col items-center text-center space-y-4"
+          >
+            <i class="ri-magic-line text-5xl text-blue-400"></i>
+            <h3 class="text-xl font-bold">Cosmetic Dentistry</h3>
+            <p class="text-slate-400">
+              Enhance the appearance of your smile through whitening, veneers,
+              and more.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="card relative group bg-slate-900/50 backdrop-blur-sm rounded-xl p-6 overflow-hidden transition-all"
+        >
+          <div
+            class="spotlight absolute inset-0 bg-blue-500/10 blur-2xl opacity-0 transition-transform duration-500 pointer-events-none"
+          ></div>
+          <div
+            class="relative z-10 flex flex-col items-center text-center space-y-4"
+          >
+            <i class="ri-shield-cross-line text-5xl text-blue-400"></i>
+            <h3 class="text-xl font-bold">Preventive Care</h3>
+            <p class="text-slate-400">
+              Keep your teeth and gums healthy with regular cleanings and exams.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="card relative group bg-slate-900/50 backdrop-blur-sm rounded-xl p-6 overflow-hidden transition-all"
+        >
+          <div
+            class="spotlight absolute inset-0 bg-blue-500/10 blur-2xl opacity-0 transition-transform duration-500 pointer-events-none"
+          ></div>
+          <div
+            class="relative z-10 flex flex-col items-center text-center space-y-4"
+          >
+            <i class="ri-heart-pulse-line text-5xl text-blue-400"></i>
+            <h3 class="text-xl font-bold">Therapeutic Services</h3>
+            <p class="text-slate-400">
+              Relief from dental pain and infections with professional
+              treatments.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-24 px-6 max-w-6xl mx-auto" id="testimonials">
+      <h2 class="text-3xl font-bold text-center text-white mb-12">
+        What Our Patients Say
+      </h2>
+
+      <div class="grid md:grid-cols-3 gap-10">
+        <div
+          class="bg-slate-800/60 backdrop-blur-md border border-blue-500/30 rounded-2xl p-6 shadow-xl hover:shadow-blue-500/20 transition-all duration-300"
+        >
+          <div class="flex items-center gap-4 mb-6">
+            <img
+              src="https://i.pravatar.cc/100?img=1"
+              alt="Patient 1"
+              style="
+                width: 48px;
+                height: 48px;
+                object-fit: cover;
+                border-radius: 9999px;
+                border: 2px solid #60a5fa;
+              "
+            />
+            <div style="margin-left: 0.5rem">
+              <h4 class="text-white font-semibold text-base">Sara M.</h4>
+              <p class="text-slate-400 text-sm">Cairo</p>
+            </div>
+          </div>
+          <p class="text-slate-300 text-sm leading-relaxed relative pl-6">
+            <span class="absolute left-0 top-0 text-blue-400 text-xl">“</span>
+            From the moment I walked in, I felt completely at ease. The staff is
+            amazing and the clinic is spotless. Highly recommended!
+          </p>
+        </div>
+
+        <div
+          class="bg-slate-800/60 backdrop-blur-md border border-blue-500/30 rounded-2xl p-6 shadow-xl hover:shadow-blue-500/20 transition-all duration-300"
+        >
+          <div class="flex items-center gap-4 mb-6">
+            <img
+              src="https://i.pravatar.cc/100?img=2"
+              alt="Patient 2"
+              style="
+                width: 48px;
+                height: 48px;
+                object-fit: cover;
+                border-radius: 9999px;
+                border: 2px solid #60a5fa;
+              "
+            />
+            <div style="margin-left: 0.5rem">
+              <h4 class="text-white font-semibold text-base">Ahmed R.</h4>
+              <p class="text-slate-400 text-sm">Alexandria</p>
+            </div>
+          </div>
+          <p class="text-slate-300 text-sm leading-relaxed relative pl-6">
+            <span class="absolute left-0 top-0 text-blue-400 text-xl">“</span>
+            The doctors explained everything clearly and made me feel confident
+            throughout my treatment. I love my new smile!
+          </p>
+        </div>
+
+        <div
+          class="bg-slate-800/60 backdrop-blur-md border border-blue-500/30 rounded-2xl p-6 shadow-xl hover:shadow-blue-500/20 transition-all duration-300"
+        >
+          <div class="flex items-center gap-4 mb-6">
+            <img
+              src="https://i.pravatar.cc/100?img=3"
+              alt="Patient 3"
+              style="
+                width: 48px;
+                height: 48px;
+                object-fit: cover;
+                border-radius: 9999px;
+                border: 2px solid #60a5fa;
+              "
+            />
+            <div style="margin-left: 0.5rem">
+              <h4 class="text-white font-semibold text-base">Lina K.</h4>
+              <p class="text-slate-400 text-sm">Giza</p>
+            </div>
+          </div>
+          <p class="text-slate-300 text-sm leading-relaxed relative pl-6">
+            <span class="absolute left-0 top-0 text-blue-400 text-xl">“</span>
+            Professional, friendly, and efficient. I've never felt more cared
+            for at a dental clinic. Five stars!
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="py-24 px-6 max-w-6xl mx-auto" id="contact">
+      <h2 class="text-3xl font-bold text-center mb-12">Get In Touch</h2>
+
+  <div class="grid md:grid-cols-2 gap-12">
+
+    <!-- Contact Form -->
+    <form class="space-y-6  p-8">
+      <div>
+        <label class="block mb-2 text-white text-sm font-medium" for="name">Your Name</label>
+        <input id="name" type="text" class="w-full p-3 rounded-lg bg-[#161b22] text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Kareem Elgohary" required>
+      </div>
+      <div>
+        <label class="block mb-2 text-white text-sm font-medium" for="email">Your Email</label>
+        <input id="email" type="email" class="w-full p-3 rounded-lg bg-[#161b22] text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="example@email.com" required>
+      </div>
+      <div>
+        <label class="block mb-2 text-white text-sm font-medium" for="message">Message</label>
+        <textarea id="message" rows="5" class="resize-none w-full p-3 rounded-lg bg-[#161b22] text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="How can we help you?" required></textarea>
+      </div>
+      <button type="submit" class="w-full py-3 cursor-pointer bg-blue-400 text-white font-semibold rounded-lg hover:bg-blue-00 transition duration-300">Send Message</button>
+    </form>
+
+    <!-- Google Maps -->
+    <div class="rounded-2xl overflow-hidden shadow-xl">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3454.1234567890!2d31.2345678!3d30.1234567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x123456789abcdef!2sSmiley%20Dental%20Clinic!5e0!3m2!1sar!2seg!4v1599999999999"
+        width="100%" 
+        height="100%" 
+        style="min-height: 400px; border:0;" 
+        allowfullscreen="" 
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+      <!-- WhatsApp Floating Button -->
+    <a
+      href="https://wa.me/201234567890"
+      class="fixed bottom-6 right-6 z-20 bg-slate-800 hover:bg-slate-700 text-white p-4 rounded-full shadow-xl transition-all duration-300"
+      target="_blank"
+      aria-label="Chat on WhatsApp"
+      title="Chat with us on WhatsApp"
+    >
+      <i class="ri-whatsapp-line text-4xl"></i>
+    </a>
+
+
+
+
+
+    <!-- Footer -->
+   <footer class="border-t border-slate-700 py-6 text-center text-slate-400">
+  Made with
+  <i class="ri-heart-3-fill text-slate-50 mx-1"></i>
+  by Dr. Kareem Elgohary
+</footer>
+
+
+    <script src="./main.js"></script>
+  </body>
+</html>
